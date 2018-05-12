@@ -21,7 +21,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
-import { LoginGuard, GuestGuard, AdminGuard } from './guard';
+import { LoginGuard, GuestGuard, AdminGuard ,UserGuard} from './guard';
 import { NotFoundComponent } from './not-found';
 import { AccountMenuComponent } from './component/header/account-menu/account-menu.component';
 import {
@@ -41,6 +41,7 @@ import {
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
 import { SignupComponent } from './signup/signup.component';
 
 export function initUserFactory(userService: UserService) {
@@ -61,6 +62,7 @@ export function initUserFactory(userService: UserService) {
     ChangePasswordComponent,
     ForbiddenComponent,
     AdminComponent,
+    UserComponent,
     SignupComponent
   ],
   imports: [
@@ -85,6 +87,7 @@ export function initUserFactory(userService: UserService) {
     LoginGuard,
     GuestGuard,
     AdminGuard,
+    UserGuard,
     FooService,
     AuthService,
     ApiService,

@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
       this.fooService.getFoo()
       .subscribe(res => {
         this.forgeResonseObj(this.fooResponse, res, path);
+        console.log("fooooo");
       }, err => {
         this.forgeResonseObj(this.fooResponse, err, path);
       });
@@ -43,6 +44,7 @@ export class HomeComponent implements OnInit {
       this.userService.getAll()
       .subscribe(res => {
         this.forgeResonseObj(this.allUserResponse, res, path);
+        console.log("admin");
       }, err => {
         this.forgeResonseObj(this.allUserResponse, err, path);
       });
@@ -58,13 +60,15 @@ export class HomeComponent implements OnInit {
       try {
         obj['body'] = JSON.stringify(JSON.parse(res._body), null, 2);
       } catch (err) {
-        console.log(res);
+        console.log('add by soufian forgeresonsobj '+res);
         obj['body'] = res.error.message;
       }
     } else {
       // 200
       obj['status'] = 200;
       obj['body'] = JSON.stringify(res, null, 2);
+      console.log('add by soufian forgeresonsobj '+res+obj['path']);
+
     }
   }
 

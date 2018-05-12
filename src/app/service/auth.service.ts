@@ -35,7 +35,7 @@ export class AuthService {
       console.log("Sign up success");
     });
   }
-  
+
   logout() {
     return this.apiService.post(this.config.logout_url, {})
       .map(() => {

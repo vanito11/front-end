@@ -21,7 +21,7 @@ export class ApiCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.responseObj);
+    console.log('this add by sofan api-card.ts'+this.responseObj);
   }
 
   onButtonClick() {

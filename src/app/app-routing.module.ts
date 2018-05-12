@@ -4,13 +4,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { AdminComponent } from './admin';
+import { UserComponent } from './user';
 import { LoginGuard } from './guard';
+import { UserGuard } from './guard/user.guard';
 import { GuestGuard, AdminGuard } from './guard';
 import { NotFoundComponent } from './not-found';
 import { ChangePasswordComponent } from './change-password';
 import { ForbiddenComponent } from './forbidden';
 import { SignupComponent } from './signup';
- 
+
 export const routes: Routes = [
   {
     path: '',
@@ -37,6 +39,11 @@ export const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     canActivate: [AdminGuard]
+  },
+  {
+    path: 'user',
+    component: UserComponent,
+    canActivate: [UserGuard]
   },
   {
     path: '404',
