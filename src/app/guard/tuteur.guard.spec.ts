@@ -1,18 +1,18 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { UserService } from '../service';
-import { StagiaireGuard } from './stagiaire.guard';
+import { TuteurGuard } from './tuteur.guard';
 import { MockUserService } from '../service/mocks';
 
 export class RouterStub {
   navigate(commands?: any[], extras?: any) {}
 }
 
-describe('StagiaireGuard', () => {
+describe('TuteurGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        StagiaireGuard,
+        TuteurGuard,
         {
           provide: Router,
           useClass: RouterStub
@@ -25,7 +25,7 @@ describe('StagiaireGuard', () => {
     });
   });
 
-  it('should ...', inject([StagiaireGuard], (guard: StagiaireGuard) => {
+  it('should ...', inject([TuteurGuard], (guard: TuteurGuard) => {
     expect(guard).toBeTruthy();
   }));
 });

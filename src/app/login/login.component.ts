@@ -95,7 +95,21 @@ export class LoginComponent implements OnInit, OnDestroy {
     .delay(1000)
     .subscribe(data => {
       this.userService.getMyInfo().subscribe();
-      this.router.navigate([this.returnUrl]);
+       if (JSON.stringify(this.userService.currentUser.authorities).search('ROLE_ADMIN') !== -1){
+          this.router.navigate(['/admin']);
+        }
+       else if (JSON.stringify(this.userService.currentUser.authorities).search('ROLE_USER') !== -1){
+         this.router.navigate(['/user']);
+       }
+        else if (JSON.stringify(this.userService.currentUser.authorities).search('ROLE_ENCADRANT') !== -1){
+          this.router.navigate(['/encadrant']);
+        }
+       else if (JSON.stringify(this.userService.currentUser.authorities).search('ROLE_STAGI') !== -1){
+         this.router.navigate(['/stagiaire']);
+       }
+       else if (JSON.stringify(this.userService.currentUser.authorities).search('ROLE_TUTEUR') !== -1){
+         this.router.navigate(['/tuteur']);
+       }
     },
     error => {
       this.submitted = false;

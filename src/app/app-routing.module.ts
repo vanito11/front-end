@@ -5,8 +5,14 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { AdminComponent } from './admin';
 import { UserComponent } from './user';
+import { ProfComponent } from './prof';
+import { StagiaireComponent } from './stagiaire/stagiaire.component';
+import { TuteurComponent } from './tuteur/tuteur.component';
 import { LoginGuard } from './guard';
 import { UserGuard } from './guard/user.guard';
+import { ProfGuard } from './guard/prof.guard';
+import { StagiaireGuard} from './guard/stagiaire.guard';
+import { TuteurGuard} from './guard/tuteur.guard';
 import { GuestGuard, AdminGuard } from './guard';
 import { NotFoundComponent } from './not-found';
 import { ChangePasswordComponent } from './change-password';
@@ -44,6 +50,21 @@ export const routes: Routes = [
     path: 'user',
     component: UserComponent,
     canActivate: [UserGuard]
+  },
+  {
+    path: 'encadrant',
+    component: ProfComponent,
+    canActivate: [ProfGuard]
+  },
+  {
+    path: 'stagiaire',
+    component: StagiaireComponent,
+    canActivate: [StagiaireGuard]
+  },
+  {
+    path: 'tuteur',
+    component: TuteurComponent,
+    canActivate: [TuteurGuard]
   },
   {
     path: '404',

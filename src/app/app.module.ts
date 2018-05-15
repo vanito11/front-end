@@ -21,7 +21,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
-import { LoginGuard, GuestGuard, AdminGuard ,UserGuard} from './guard';
+import { LoginGuard, GuestGuard, AdminGuard } from './guard';
+import { ProfGuard} from './guard/prof.guard';
+import { StagiaireGuard} from './guard/stagiaire.guard';
+import { TuteurGuard} from './guard/tuteur.guard';
+import { UserGuard} from './guard/user.guard';
 import { NotFoundComponent } from './not-found';
 import { AccountMenuComponent } from './component/header/account-menu/account-menu.component';
 import {
@@ -42,6 +46,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
+import { ProfComponent } from './prof/prof.component';
+import { StagiaireComponent } from './stagiaire/stagiaire.component';
+import { TuteurComponent } from './tuteur/tuteur.component';
 import { SignupComponent } from './signup/signup.component';
 
 export function initUserFactory(userService: UserService) {
@@ -63,6 +70,9 @@ export function initUserFactory(userService: UserService) {
     ForbiddenComponent,
     AdminComponent,
     UserComponent,
+    ProfComponent,
+    TuteurComponent,
+    StagiaireComponent,
     SignupComponent
   ],
   imports: [
@@ -88,6 +98,9 @@ export function initUserFactory(userService: UserService) {
     GuestGuard,
     AdminGuard,
     UserGuard,
+    ProfGuard,
+    StagiaireGuard,
+    TuteurGuard,
     FooService,
     AuthService,
     ApiService,
