@@ -1,3 +1,9 @@
-<p>
-  This is admin page!
-</p>
+<div>
+  <button (click)="toggle()" id="bt">
+    {{buttonName}}
+  </button>
+
+  <ng-container *ngIf="show">
+    <app-signup></app-signup>
+  </ng-container>
+</div>

@@ -1,5 +1,4 @@
 <div class="content" fxLayout="row" fxLayoutAlign="center">
-
   <mat-card elevation="5" fxFlex>
 
     <mat-card-subtitle>
@@ -16,8 +15,14 @@
 
       <form *ngIf="!submitted" [formGroup]="form" (ngSubmit)="onSubmit()" #signupForm="ngForm">
         <mat-input-container>
-          <label>Username: </label>
-          <input matInput formControlName="username" required>
+          <label>type: </label>
+          <input matInput formControlName="role" required>
+          <input type="radio" value="statgiaire" name="gender" ngModel> statgiaire
+          <input type="radio" value="encadrant" name="gender" ngModel> encadrant
+        </mat-input-container>
+        <mat-input-container>
+          <label>Email: </label>
+          <input type="email" matInput formControlName="username" required>
         </mat-input-container>
         <mat-input-container>
           <label>Password: </label>

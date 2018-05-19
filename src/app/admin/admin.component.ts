@@ -9,8 +9,21 @@ export class AdminComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public show:boolean = false;
+  public buttonName:any = 'CREER UN NEAUVOU UTILISATEUR';
+
+  ngOnInit () {  }
+
+  toggle() {
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
   }
+
 
 }
 

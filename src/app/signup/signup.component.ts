@@ -21,6 +21,8 @@ export class SignupComponent implements OnInit, OnDestroy {
   title = 'Sign up';
   githubLink = 'https://github.com/bfwg/angular-spring-starter';
   form: FormGroup;
+  gender: string;
+
 
   /**
    * Boolean used in telling the UI
@@ -49,14 +51,10 @@ export class SignupComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.route.params
-    .takeUntil(this.ngUnsubscribe)
-    .subscribe((params: DisplayMessage) => {
-      this.notification = params;
-    });
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     this.form = this.formBuilder.group({
+      role: [''],
       username: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(64)])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(32)])],
       firstname:[''],
@@ -97,6 +95,8 @@ export class SignupComponent implements OnInit, OnDestroy {
     });
 
   }
+
+
 
 
 }
