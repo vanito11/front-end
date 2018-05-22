@@ -18,6 +18,7 @@ import { NotFoundComponent } from './not-found';
 import { ChangePasswordComponent } from './change-password';
 import { ForbiddenComponent } from './forbidden';
 import { SignupComponent } from './signup';
+import {AdminCreateComponent} from './admin/admin-create/admin-create.component';
 
 export const routes: Routes = [
   {
@@ -44,6 +45,11 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'admin/add',
+    component: AdminCreateComponent,
     canActivate: [AdminGuard]
   },
   {

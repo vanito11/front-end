@@ -1,0 +1,58 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+<div class="container-fluid bg-light py-3">
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-6 mx-auto">
+      <div class="card card-body">
+        <h3 class="text-center mb-4">CREER UN NOUVEAU UTILISATEUR</h3>
+        <div class="">
+          <mat-spinner *ngIf="submitted" mode="indeterminate"></mat-spinner>
+          <!--  <a class="close font-weight-light" data-dismiss="alert" href="#">×</a>Password is too short. -->
+        </div>
+        <form *ngIf="!submitted" [formGroup]="form" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="role" id="inlineRadio1" value="stagiaire"> STAGIARE
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="role" id="inlineRadio2" value="encadrant"> ENCADRANT
+              </label>
+            </div>
+            <div class="form-check form-check-inline ">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="role" id="inlineRadio3" value="tuteur"> TUTEUR
+              </label>
+            </div>
+          </div>
+
+          <fieldset>
+            <div class="form-group">
+              <input class="form-control input-lg" placeholder="Nom" formControlName="firstname" name="firstName"
+                     value="" type="text">
+            </div>
+            <div class="form-group">
+              <input class="form-control input-lg" placeholder="Prenom" formControlName="lastName" name="lastName"
+                     value="" type="text">
+            </div>
+            <div class="form-group has-error">
+              <input class="form-control input-lg" placeholder="E-mail Address" formControlName="username" required
+                     name="username" type="text">
+            </div>
+
+            <div class="form-group has-success">
+              <input class="form-control input-lg" placeholder="Password" formControlName="password" required
+                     name="password" value="123"
+                     type="password">
+            </div>
+            <input class="btn btn-lg btn-primary btn-block" value="ENREGISTRER" type="submit"
+                   [disabled]="!signupForm.form.valid">
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

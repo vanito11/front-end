@@ -1,25 +1,25 @@
-<mat-toolbar color="primary" class="app-navbar">
+<mat-toolbar color="primary" class="app-navbar" style="display: none;">
   <button mat-button mat-ripple routerLink="/">
     <img alt="Angular-Spring-Starter" class="app-angular-logo" src="assets/image/angular-white-transparent.svg">
-    <span>Angular-Spring-Starter</span>
+    <span>GESTION STAGIAIRE</span>
   </button>
-  
+
 
 
   <div class="right">
     <div fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="flex-end center">
       <button *ngIf="!hasSignedIn()" routerLink="/signup" mat-button mat-ripple>
-        <span>Sign up</span>
+        <span>INSCRIPTION</span>
       </button>
       <button *ngIf="!hasSignedIn()" routerLink="/login" mat-button mat-ripple>
-        <span>Login</span>
+        <span>CONNEXION</span>
       </button>
       <button
         class="greeting-button"
         *ngIf="hasSignedIn()"
         mat-button mat-ripple
         [matMenuTriggerFor]="accountMenu">
-        <span>Aloha, {{userName()}}</span>
+        <span>BIENVENU, {{userName()}}</span>
       </button>
       <button
         class="greeting-hamburger"
@@ -38,3 +38,50 @@
   </div>
 </mat-toolbar>
 
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">GESTION STAGIAIRE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample04" *ngIf="hasSignedIn()">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin"><i class="fa fa-home"></i> Acceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/add"><i class="fa fa-user-plus"></i> Nouveau Utilisateur</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/admin/stagiaires"><i class="fa fa-ellipsis-v-alt"></i> Stagiaires</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/admin/encadrantes"><i class="fa fa-ellipsis-v-alt"></i> Encadrantes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/admin/tuteurs"><i class="fa fa-ellipsis-v-alt"></i> Tuteurs</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </li> -->
+    </ul>
+    <form class="form-inline my-2 my-md-0">
+      <button class="form-control"
+        class="greeting-button"
+        *ngIf="hasSignedIn()"
+        mat-button mat-ripple
+        [matMenuTriggerFor]="accountMenu">
+        <span><i class="fa fa-cogs"></i> {{userName()}} <i class="fa fa-ellipsis-v"></i></span>
+      </button>
+    </form>
+  </div>
+</nav>

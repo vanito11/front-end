@@ -21,7 +21,6 @@ export class SignupComponent implements OnInit, OnDestroy {
   title = 'Sign up';
   githubLink = 'https://github.com/bfwg/angular-spring-starter';
   form: FormGroup;
-  gender: string;
 
 
   /**

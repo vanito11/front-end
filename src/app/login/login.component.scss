@@ -1,58 +1,44 @@
-.content {
+html,
+#bod{
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
   width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
-
-mat-card {
-  max-width: 350px;
-  text-align: center;
-  animation: fadein 1s;
-  -o-animation: fadein 1s; /* Opera */
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari and Chrome */
-
+.form-signin .checkbox {
+  font-weight: 400;
 }
-
-mat-input-container {
-  display: block;
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
 }
-
-mat-spinner {
-  width: 25px;
-  height: 25px;
-  margin: 20px auto 0 auto;
+.form-signin .form-control:focus {
+  z-index: 2;
 }
-
-button {
-  display: block;
-  width: 100%;
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-
-.error {
-  color: #D50000;
-}
-
-.success {
-  color: #8BC34A;
-}
-
-
-@media screen and (max-width: 599px) {
-
-  .content {
-    /* https://github.com/angular/flex-layout/issues/295 */
-    display: block !important;
-  }
-
-  mat-card {
-    /* https://github.com/angular/flex-layout/issues/295 */
-    display: block !important;
-    max-width: 999px;
-  }
-
-}
-
-a {
-  text-decoration: none;
-  cursor: auto;
-  color: #FFFFFF;
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

@@ -50,6 +50,11 @@ import { ProfComponent } from './prof/prof.component';
 import { StagiaireComponent } from './stagiaire/stagiaire.component';
 import { TuteurComponent } from './tuteur/tuteur.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdminCreateComponent } from './admin/admin-create/admin-create.component';
+import { AdminStagiairesComponent } from './admin/admin-stagiaires/admin-stagiaires.component';
+import { AdminTuteursComponent } from './admin/admin-tuteurs/admin-tuteurs.component';
+import { AdminEncadrantsComponent } from './admin/admin-encadrants/admin-encadrants.component';
+import { AdminStagesComponent } from './admin/admin-stages/admin-stages.component';
 
 export function initUserFactory(userService: UserService) {
     return () => userService.initUser();
@@ -73,7 +78,12 @@ export function initUserFactory(userService: UserService) {
     ProfComponent,
     TuteurComponent,
     StagiaireComponent,
-    SignupComponent
+    SignupComponent,
+    AdminCreateComponent,
+    AdminStagiairesComponent,
+    AdminTuteursComponent,
+    AdminEncadrantsComponent,
+    AdminStagesComponent
   ],
   imports: [
     BrowserAnimationsModule,
