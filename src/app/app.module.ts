@@ -28,8 +28,10 @@ import { TuteurGuard} from './guard/tuteur.guard';
 import { UserGuard} from './guard/user.guard';
 import { NotFoundComponent } from './not-found';
 import { AccountMenuComponent } from './component/header/account-menu/account-menu.component';
+import { AccountMenuAdminComponent } from './component/header-admin/account-menuadmin/account-menuadmin.component';
 import {
   HeaderComponent,
+  HeaderAdminComponent,
   ApiCardComponent,
   FooterComponent,
   GithubComponent
@@ -45,6 +47,9 @@ import {
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminComponent } from './admin/admin.component';
+import {AdminSignupComponent} from './admin/admin-signup/admin.signup.component';
+import {AdminTuteursComponent} from './admin/admin-tuteurs/admin.tuteurs.component';
+import {AdminChangePasswordComponent} from './admin/admin-change-password/admin.change-password.component';
 import { UserComponent } from './user/user.component';
 import { ProfComponent } from './prof/prof.component';
 import { StagiaireComponent } from './stagiaire/stagiaire.component';
@@ -59,6 +64,7 @@ export function initUserFactory(userService: UserService) {
   declarations: [
     AppComponent,
     HeaderComponent,
+    HeaderAdminComponent,
     FooterComponent,
     ApiCardComponent,
     HomeComponent,
@@ -67,8 +73,11 @@ export function initUserFactory(userService: UserService) {
     NotFoundComponent,
     AccountMenuComponent,
     ChangePasswordComponent,
+    AdminTuteursComponent,
     ForbiddenComponent,
     AdminComponent,
+    AdminSignupComponent,
+    AdminChangePasswordComponent,
     UserComponent,
     ProfComponent,
     TuteurComponent,

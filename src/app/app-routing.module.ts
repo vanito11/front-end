@@ -18,11 +18,14 @@ import { NotFoundComponent } from './not-found';
 import { ChangePasswordComponent } from './change-password';
 import { ForbiddenComponent } from './forbidden';
 import { SignupComponent } from './signup';
+import {AdminSignupComponent} from './admin/admin-signup';
+import {AdminChangePasswordComponent} from './admin/admin-change-password';
+import {AdminTuteursComponent} from './admin/admin-tuteurs';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LoginComponent,
     pathMatch: 'full'
   },
   {
@@ -44,6 +47,21 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'tuteurs',
+    component: AdminTuteursComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'create',
+    component: AdminSignupComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'changepassword',
+    component: AdminChangePasswordComponent,
     canActivate: [AdminGuard]
   },
   {
