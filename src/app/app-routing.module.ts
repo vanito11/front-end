@@ -19,6 +19,9 @@ import { ChangePasswordComponent } from './change-password';
 import { ForbiddenComponent } from './forbidden';
 import { SignupComponent } from './signup';
 import {AdminCreateComponent} from './admin/admin-create/admin-create.component';
+import {AdminStagiairesComponent} from './admin/admin-stagiaires/admin-stagiaires.component';
+import {AdminTuteursComponent} from './admin/admin-tuteurs/admin-tuteurs.component';
+import {AdminEncadrantsComponent} from './admin/admin-encadrants/admin-encadrants.component';
 
 export const routes: Routes = [
   {
@@ -50,6 +53,21 @@ export const routes: Routes = [
   {
     path: 'admin/add',
     component: AdminCreateComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'admin/stagiaires',
+    component: AdminStagiairesComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'admin/tuteurs',
+    component: AdminTuteursComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'admin/encadrantes',
+    component: AdminEncadrantsComponent,
     canActivate: [AdminGuard]
   },
   {

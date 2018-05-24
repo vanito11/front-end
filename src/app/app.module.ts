@@ -55,6 +55,7 @@ import { AdminStagiairesComponent } from './admin/admin-stagiaires/admin-stagiai
 import { AdminTuteursComponent } from './admin/admin-tuteurs/admin-tuteurs.component';
 import { AdminEncadrantsComponent } from './admin/admin-encadrants/admin-encadrants.component';
 import { AdminStagesComponent } from './admin/admin-stages/admin-stages.component';
+import {EncadrantService} from './service/encadrant.service';
 
 export function initUserFactory(userService: UserService) {
     return () => userService.initUser();
@@ -113,6 +114,7 @@ export function initUserFactory(userService: UserService) {
     TuteurGuard,
     FooService,
     AuthService,
+    EncadrantService,
     ApiService,
     UserService,
     ConfigService,

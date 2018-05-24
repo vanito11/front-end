@@ -7,6 +7,7 @@ import { ConfigService } from './config.service';
 export class UserService {
 
   currentUser;
+  encadrants;
 
   constructor(
     private apiService: ApiService,
@@ -37,6 +38,10 @@ export class UserService {
 
   getAll() {
     return this.apiService.get(this.config.users_url);
+  }
+
+  getAllEncadrants() {
+    return this.apiService.get(this.config.encadrants_url);
   }
 
 }

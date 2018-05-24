@@ -1,3 +1,58 @@
-<p>
-  admin-stagiaires works!
-</p>
+<app-header style="position:fixed; width: 100%;"></app-header>
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+      <nav class="nav flex-column">
+        <a class="nav-link active" href="">Link</a>
+        <a class="nav-link" href="">Link</a>
+        <a class="nav-link" href="">Link</a>
+      </nav>
+    </div>
+    <div class="col-lg-10">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="text-transform: capitalize;">chercher un stagaiare par email : </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">RECHERCHER</button>
+          </form>
+        </div>
+      </nav>
+
+      <table class="table">
+        <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let e of stagiaires">
+          <th scope="col">{{e.id}}</th>
+          <th scope="col">{{e.nom}}</th>
+          <th scope="col">{{e.prenom}}</th>
+          <th scope="col">{{e.email}}</th>
+        </tr>
+
+        </tbody>
+      </table>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+
+
+</div><!-- /.container -->
+
+
+
+
+
+
+
