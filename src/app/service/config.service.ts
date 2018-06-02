@@ -28,6 +28,8 @@ export class ConfigService {
 
   private _stagiaires_url = this._api_url + '/stagiaires';
 
+  private _stages_url = this._api_url + '/stagestagiaires';
+
   private _tuteurs_url = this._api_url + '/tuteurs';
 
   private _reset_credentials_url = this._user_url + '/reset-credentials';
@@ -35,6 +37,18 @@ export class ConfigService {
   private _foo_url = this._api_url + '/foo';
 
   private _signup_url = this._api_url + '/signup';
+
+  private _filiere_url = this._api_url + '/filieres';
+
+  private _getStagiaire_url = this._api_url + '/stagiaires/';
+
+  get getStagiaire_url(): string {
+    return this._getStagiaire_url;
+  }
+
+  get filiere_url(): string {
+    return this._filiere_url;
+  }
 
   get reset_credentials_url(): string {
     return this._reset_credentials_url;
@@ -63,7 +77,9 @@ export class ConfigService {
   get stagiaires_url(): string {
     return this._stagiaires_url;
   }
-
+  get stages_url(): string {
+    return this._stages_url;
+  }
   get tuteurs_url(): string {
     return this._tuteurs_url;
   }
@@ -87,5 +103,7 @@ export class ConfigService {
   get signup_url(): string {
     return this._signup_url;
   }
+
+
 
 }

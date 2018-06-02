@@ -30,6 +30,7 @@ export class AdminCreateComponent implements OnInit {
 
   constructor(private userService: UserService,
               private authService: AuthService,
+              private sauthService: AuthService,
               private router: Router,
               private route: ActivatedRoute,
               private formBuilder: FormBuilder) {
@@ -66,10 +67,8 @@ export class AdminCreateComponent implements OnInit {
       .delay(1000)
       .subscribe(data => {
           console.log(data);
-          this.authService.login(this.form.value).subscribe(data => {
-            this.userService.getMyInfo().subscribe();
-          })
-          this.router.navigate([this.returnUrl]);
+          this.form.reset();
+          this.router.navigate(['/admin/add']);
         },
         error => {
           this.submitted = false;

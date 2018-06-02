@@ -1,0 +1,86 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+              <form #f="ngForm" (ngSubmit)="saveStagiaire(f.value)">
+
+                <div class="form-group">
+                  <label class="control-label">Nom:</label>
+                  <input class="form-control" type="text" ngModel name="nom" required/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Prenom:</label>
+                  <input class="form-control" type="text" ngModel name="prenom" required/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Email:</label>
+                  <input class="form-control" type="text" ngModel name="email" required/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Date de Naissance:</label>
+                  <input class="form-control" type="date" ngModel name="dateNaissance"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Niveau:</label>
+                  <input class="form-control" type="number" ngModel name="niveau" required/>
+                </div>
+
+                <div>
+                  <label class="control-label">Adresse:</label>
+                  <input class="form-control" type="text" ngModel name="adresse"/>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="control-label">Telephone:</label>
+                  <input class="form-control" type="text" ngModel name="telephone" required/>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="control-label">Filiere:</label>
+
+
+
+                  <select  class="form-control"  ngModel name="filiereid">
+                    <option *ngFor="let e of filiere" value={{e.id}}>{{ e.nomFiliere }}</option>
+                  </select>
+                </div>
+
+
+                <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+

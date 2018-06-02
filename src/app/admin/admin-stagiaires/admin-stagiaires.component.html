@@ -1,3 +1,4 @@
+
 <app-header style="position:fixed; width: 100%;"></app-header>
 <div id="contents" class="container marketing">
 
@@ -5,9 +6,7 @@
   <div class="row" style="padding-top: 100px;">
     <div class="col-md-2">
       <nav class="nav flex-column">
-        <a class="nav-link active" href="">Link</a>
-        <a class="nav-link" href="">Link</a>
-        <a class="nav-link" href="">Link</a>
+        <a class="nav-link active" href="admin/stagiaire/newstagiaires">Ajouter Stagiaire</a>
       </nav>
     </div>
     <div class="col-lg-10">
@@ -28,24 +27,40 @@
       <table class="table">
         <thead class="thead-light">
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
           <th scope="col">Email</th>
+          <th scope="col">Nationnalite</th>
+          <th scope="col">Niveau</th>
+          <th scope="col">Telephone</th>
+          <th scope="col">Filiere</th>
+          <th scope="col">Option</th>
+
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let e of stagiaires">
-          <th scope="col">{{e.id}}</th>
           <th scope="col">{{e.nom}}</th>
           <th scope="col">{{e.prenom}}</th>
           <th scope="col">{{e.email}}</th>
+          <th scope="col">{{e.nationnalite}}</th>
+          <th scope="col">{{e.niveau}}</th>
+          <th scope="col">{{e.telephone}}</th>
+
+          <th scope="col">
+            <button (click)="onUpdateStagiaire(e.id)" class="btn btn-primary">UPDATE</button>
+
+            <button (click)="onDeleteStagiaire(e.id)" class="btn btn-primary">Delete</button>
+
+          </th>
         </tr>
 
         </tbody>
       </table>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
+
+
 
 
 </div><!-- /.container -->

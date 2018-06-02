@@ -5,9 +5,8 @@
   <div class="row" style="padding-top: 100px;">
     <div class="col-md-2">
       <nav class="nav flex-column">
-        <a class="nav-link active" href="">Link</a>
-        <a class="nav-link" href="">Link</a>
-        <a class="nav-link" href="">Link</a>
+        <a class="nav-link active" href="">Ajouter Tuteur</a>
+
       </nav>
     </div>
     <div class="col-lg-10">
@@ -28,18 +27,27 @@
       <table class="table">
         <thead class="thead-light">
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Date de Naissance</th>
           <th scope="col">Email</th>
+          <th scope="col">Telephone</th>
+          <th scope="col">Entreprise</th>
+          <th scope="col">Option</th>
+
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let e of tuteurs">
-          <th scope="col">{{e.id}}</th>
-          <th scope="col">{{e.nom}}</th>
+           <th scope="col">{{e.nom}}</th>
           <th scope="col">{{e.prenom}}</th>
+          <th scope="col">{{e.date_naissance}}</th>
           <th scope="col">{{e.email}}</th>
+          <th scope="col">{{e.telephone}}</th>
+          <th scope="col">{{e.entreprise.nom}}</th>
+          <th scope="col">
+            <a class="nav-link active" href="">Update</a><a class="nav-link active" href="">Delete</a><a class="nav-link active" href="">Afficher</a>
+          </th>
         </tr>
 
         </tbody>

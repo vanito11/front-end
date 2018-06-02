@@ -22,13 +22,24 @@ import {AdminCreateComponent} from './admin/admin-create/admin-create.component'
 import {AdminStagiairesComponent} from './admin/admin-stagiaires/admin-stagiaires.component';
 import {AdminTuteursComponent} from './admin/admin-tuteurs/admin-tuteurs.component';
 import {AdminEncadrantsComponent} from './admin/admin-encadrants/admin-encadrants.component';
+import {AdminStagesComponent} from './admin/admin-stages/admin-stages.component';
+import {FiliereComponent} from './admin/filiere/filiere.component';
+import {NewStagiairesComponent} from './admin/stagiaire/new-stagiaires/new-stagiaires.component';
+import {UppdateStagiairesComponent} from './admin/stagiaire/uppdate-stagiaires/uppdate-stagiaires.component';
 
 export const routes: Routes = [
+
   {
-    path: '',
-    component: HomeComponent,
-    pathMatch: 'full'
+    path: 'admin/stagiaire/newstagiaires',
+    component: NewStagiairesComponent,
+    canActivate: [AdminGuard],
   },
+  {
+    path: 'editStagiaire/:id',
+    component: UppdateStagiairesComponent,
+    canActivate: [AdminGuard],
+  },
+
   {
     path:'signup',
     component: SignupComponent,
@@ -71,6 +82,16 @@ export const routes: Routes = [
     canActivate: [AdminGuard]
   },
   {
+    path: 'admin/stage',
+    component: AdminStagesComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'admin/filiere',
+    component: FiliereComponent,
+    canActivate: [AdminGuard]
+  },
+  {
     path: 'user',
     component: UserComponent,
     canActivate: [UserGuard]
@@ -110,3 +131,4 @@ export const routes: Routes = [
   providers: []
 })
 export class AppRoutingModule { }
+

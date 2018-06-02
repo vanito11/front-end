@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Headers, Http} from '@angular/http';
 import {ApiService} from './api.service';
 import {ConfigService} from './config.service';
+import {Stagiaires} from "../model/model.Stagiaire";
 
 @Injectable()
 export class EncadrantService {
@@ -13,7 +14,7 @@ export class EncadrantService {
 
   constructor(private apiService: ApiService,
               private config: ConfigService,
-              private http: Http) {
+              public http: Http) {
     this.http = http;
   }
 
@@ -26,5 +27,7 @@ export class EncadrantService {
     return this.http.get(this.config.encadrant_search_email_url + email)
       .map(resp => resp.json());
   }
+
+
 
 }

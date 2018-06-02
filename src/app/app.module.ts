@@ -56,6 +56,11 @@ import { AdminTuteursComponent } from './admin/admin-tuteurs/admin-tuteurs.compo
 import { AdminEncadrantsComponent } from './admin/admin-encadrants/admin-encadrants.component';
 import { AdminStagesComponent } from './admin/admin-stages/admin-stages.component';
 import {EncadrantService} from './service/encadrant.service';
+import { FiliereComponent } from './admin/filiere/filiere.component';
+import { NewStagiairesComponent } from './admin/stagiaire/new-stagiaires/new-stagiaires.component';
+import { UppdateStagiairesComponent } from './admin/stagiaire/uppdate-stagiaires/uppdate-stagiaires.component';
+import {StagiaireService} from "./service/stagiaire.service";
+
 
 export function initUserFactory(userService: UserService) {
     return () => userService.initUser();
@@ -84,7 +89,12 @@ export function initUserFactory(userService: UserService) {
     AdminStagiairesComponent,
     AdminTuteursComponent,
     AdminEncadrantsComponent,
-    AdminStagesComponent
+    AdminStagesComponent,
+    FiliereComponent,
+    NewStagiairesComponent,
+    UppdateStagiairesComponent,
+
+
   ],
   imports: [
     BrowserAnimationsModule,
@@ -115,10 +125,12 @@ export function initUserFactory(userService: UserService) {
     FooService,
     AuthService,
     EncadrantService,
+    StagiaireService,
     ApiService,
     UserService,
     ConfigService,
     MatIconRegistry,
+
     {
       'provide': APP_INITIALIZER,
       'useFactory': initUserFactory,

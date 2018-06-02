@@ -1,0 +1,92 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+              <div class="form-group" style="display: none ">
+                <label class="control-label">id: update</label>
+                <input class="form-control" type="text" [(ngModel)]="stagiaires.id" />
+              </div>
+                <div class="form-group">
+                  <label class="control-label">Nom: update</label>
+                  <input class="form-control" type="text" [(ngModel)]="stagiaires.nom" />
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Prenom:</label>
+                  <input class="form-control" type="text" [(ngModel)]="stagiaires.prenom"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Email:</label>
+                  <input class="form-control" type="text" [(ngModel)]="stagiaires.email"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Date de Naissance:</label>
+                  <input class="form-control"    [(ngModel)]="stagiaires.dateNaissance"  type="date" value="{{stagiaires.dateNaissance | date}}"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Niveau:</label>
+                  <input  class="form-control" type="number" [(ngModel)]="stagiaires.niveau"/>
+                </div>
+
+                <div>
+                  <label class="control-label">Adresse:</label>
+                  <input  class="form-control" type="text" [(ngModel)]="stagiaires.adresse"/>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="control-label">Telephone:</label>
+                  <input  class="form-control" type="text" [(ngModel)]="stagiaires.telephone"/>
+                </div>
+
+
+
+                <div class="form-group">
+                  <label class="control-label">Filiere:</label>
+
+                  <select  class="form-control" [(ngModel)]="stagiaires.filiere.id">
+                    <option *ngFor="let e of filiere" value={{e.id}}>{{ e.nomFiliere }}</option>
+                  </select>
+
+
+                </div>
+
+
+
+                <button (click)="updateStagiaire(stagiaires)" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
