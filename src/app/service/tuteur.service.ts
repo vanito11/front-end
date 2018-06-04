@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import {Headers, Http} from '@angular/http';
 import {ApiService} from './api.service';
 import {ConfigService} from './config.service';
-import {Stagiaires} from "../model/model.Stagiaire";
-import {Filiere} from "../model/model.Filiere";
+import {Tuteur} from "../model/model.Tuteur";
 
 @Injectable()
-export class StagiaireService {
+export class TuteurService {
 
 
   httpp: Http;
@@ -18,28 +17,29 @@ export class StagiaireService {
     this.http = http;
   }
 
-  getStagiaires(id:number)
+
+  getTuteur(id:number)
   {
-    return this.http.get('http://localhost:8080/api/stagiaires/'+id).map(resp => resp.json());
+    return this.http.get(this.config.tuteurs_url+"/"+id).map(resp => resp.json());
   }
-  saveStagiaire(stagiaire:Stagiaires) {
-    return this.http.post(this.config.stagiaires_url,stagiaire)
+  saveTuteur(tuteur:Tuteur) {
+    return this.http.post(this.config.tuteurs_url,tuteur)
       .map(resp => resp.json());
   }
 
-  updateStagiaire(stagiaires:Stagiaires) {
-    console.log(stagiaires);
-    return this.http.put(this.config.stagiaires_url+"/update/"+stagiaires.id,stagiaires)
+  updateTuteur(tuteur:Tuteur) {
+    console.log(tuteur);
+    return this.http.put(this.config.tuteurs_url+"/update/"+tuteur.id,tuteur)
       .map(resp => resp.json());
   }
-  DeleteStagiaire(id:number) {
-    return this.http.delete(this.config.stagiaires_url+"/"+id)
+  DeleteTuteur(id:number) {
+    return this.http.delete(this.config.tuteurs_url+"/"+id)
       .map(resp => resp.json());
   }
 
 
 
-
+/*
 
   ///////Filiere service
 
@@ -60,6 +60,6 @@ export class StagiaireService {
   Deletefiliere(id:number) {
     return this.http.delete(this.config.filiere_url+"/"+id)
       .map(resp => resp.json());
-  }
+  }*/
 
 }

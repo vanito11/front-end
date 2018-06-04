@@ -1,0 +1,57 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+
+
+              <div class="form-group">
+                <label class="control-label">Filiere</label>
+                <input class="form-control" type="text" [(ngModel)]="filiere.nomFiliere" />
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Description</label>
+                <input class="form-control" type="text" [(ngModel)]="filiere.Description"/>
+              </div>
+
+
+
+
+
+
+
+
+              <button (click)="updateFiliere(filiere)" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

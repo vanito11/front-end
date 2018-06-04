@@ -17,16 +17,15 @@ import {Filiere} from "../../../model/model.Filiere";
   styleUrls: ['./new-stagiaires.component.css']
 })
 export class NewStagiairesComponent implements OnInit {
-  currentFiliere;
-  filiere: any;
-  fil: any;
+  filieree:any;
+filiere:Filiere = new Filiere();
 
-
-  stagiaire: Stagiaires = new Stagiaires();
+  stagiaires: Stagiaires = new Stagiaires();
 
   constructor(private apiService: ApiService,
               private config: ConfigService,
               private http: Http,
+              private router: Router,
               public stagiaireServices: StagiaireService) {
     this.http = http;
 
@@ -37,27 +36,27 @@ export class NewStagiairesComponent implements OnInit {
     this.http.get(this.config.filiere_url)
       .map(resp => resp.json())
       .subscribe(data => {
-          this.filiere = data;
+          this.filieree = data;
         }, error => {
           console.log('GET STAGIAIRES ERROR :' + error);
         }
       )
   }
 
-  saveStagiaire(dataForm) {
-    this.stagiaire=dataForm;
-    var y = parseInt(dataForm.filiereid);
-    console.log('y : '+y);
-    this.stagiaire.filiere.id = y;
+  saveStagiaire(DataForm) {
 
-    console.log(this.stagiaire);
-    /*
-    this.stagiaireServices.saveStagiaire(this.stagiaire).subscribe(data => {
-      console.log(data)
-    }, err => {
-      console.log(JSON.parse(err._body).message);
-    })*/
-  }
+        this.stagiaires= DataForm;
+        this.filiere.id = +DataForm.filiere;
+        this.stagiaires.filiere = this.filiere;
+
+         this.stagiaireServices.saveStagiaire(this.stagiaires).subscribe(data => {
+            console.log(data)
+
+            this.router.navigate(['admin/stagiaires']);
+          }, err => {
+            console.log(JSON.parse(err._body).message);
+          })
+        }
 
 
 }

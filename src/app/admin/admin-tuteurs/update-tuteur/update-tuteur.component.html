@@ -1,0 +1,77 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+
+
+              <div class="form-group">
+                <label class="control-label">Nom: </label>
+                <input class="form-control" type="text" [(ngModel)]="tuteur.nom" />
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Prenom:</label>
+                <input class="form-control" type="text" [(ngModel)]="tuteur.prenom"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Email:</label>
+                <input class="form-control" type="text" [(ngModel)]="tuteur.email"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Date de Naissance:</label>
+                <input class="form-control" type="date" [(ngModel)]="tuteur.dateNaissance"/>
+              </div>
+
+
+              <div class="form-group">
+                <label class="control-label">Telephone:</label>
+                <input  class="form-control" type="text" [(ngModel)]="tuteur.telephone"/>
+              </div>
+
+
+              <div class="form-group">
+                <label class="control-label">Entreprise:</label>
+
+                <select  class="form-control" [(ngModel)]="tuteur.entreprise.id">
+                  <option *ngFor="let e of ent" value={{e.id}}>{{ e.nom }}</option>
+                </select>
+
+
+              </div>
+
+              <button (click)="updateTuteur(tuteur)" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

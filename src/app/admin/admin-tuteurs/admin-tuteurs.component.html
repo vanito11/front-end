@@ -5,7 +5,8 @@
   <div class="row" style="padding-top: 100px;">
     <div class="col-md-2">
       <nav class="nav flex-column">
-        <a class="nav-link active" href="">Ajouter Tuteur</a>
+        <a class="nav-link active" href="admin/tuteur/newtuteur">Ajouter Tuteur</a>
+        <a class="nav-link active" href="admin/entreprises">List Entreprise</a>
 
       </nav>
     </div>
@@ -41,12 +42,15 @@
         <tr *ngFor="let e of tuteurs">
            <th scope="col">{{e.nom}}</th>
           <th scope="col">{{e.prenom}}</th>
-          <th scope="col">{{e.date_naissance}}</th>
+          <th scope="col">{{e.dateNaissance}}</th>
           <th scope="col">{{e.email}}</th>
           <th scope="col">{{e.telephone}}</th>
           <th scope="col">{{e.entreprise.nom}}</th>
           <th scope="col">
-            <a class="nav-link active" href="">Update</a><a class="nav-link active" href="">Delete</a><a class="nav-link active" href="">Afficher</a>
+            <button (click)="onUpdateTuteur(e.id)" class="btn btn-primary">UPDATE</button>
+
+            <button (click)="onDeleteTuteur(e.id)" class="btn btn-primary">Delete</button>
+
           </th>
         </tr>
 

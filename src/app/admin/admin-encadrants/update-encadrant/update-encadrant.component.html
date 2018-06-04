@@ -1,0 +1,73 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+
+              <div class="form-group">
+                <label class="control-label">id: update</label>
+                <input class="form-control" type="text" [(ngModel)]="encadrant.id" />
+              </div>
+              <div class="form-group">
+                <label class="control-label">Nom: update</label>
+                <input class="form-control" type="text" [(ngModel)]="encadrant.nom" />
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Prenom:</label>
+                <input class="form-control" type="text" [(ngModel)]="encadrant.prenom"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Email:</label>
+                <input class="form-control" type="text" [(ngModel)]="encadrant.email"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Date de Naissance:</label>
+                <input class="form-control" type="date" [(ngModel)]="encadrant.dateNaissance"/>
+              </div>
+
+              <div>
+                <label class="control-label">Adresse:</label>
+                <input  class="form-control" type="text" [(ngModel)]="encadrant.adresse"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Telephone:</label>
+                <input  class="form-control" type="text" [(ngModel)]="encadrant.telephone"/>
+              </div>
+
+              <button (click)="updateEncadrant(encadrant)" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

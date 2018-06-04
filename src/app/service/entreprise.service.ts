@@ -2,11 +2,13 @@ import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import {ApiService} from './api.service';
 import {ConfigService} from './config.service';
-import {Stagiaires} from "../model/model.Stagiaire";
-import {Filiere} from "../model/model.Filiere";
+import {Entreprise} from "../model/model.Entreprise";
+
 
 @Injectable()
-export class StagiaireService {
+export class EntrepriseService {
+
+
 
 
   httpp: Http;
@@ -18,28 +20,29 @@ export class StagiaireService {
     this.http = http;
   }
 
-  getStagiaires(id:number)
-  {
-    return this.http.get('http://localhost:8080/api/stagiaires/'+id).map(resp => resp.json());
+  getEntreprise(id: number) {
+    return this.http.get(this.config.entreprises_url + "/" + id).map(resp => resp.json());
   }
-  saveStagiaire(stagiaire:Stagiaires) {
-    return this.http.post(this.config.stagiaires_url,stagiaire)
+
+  saveEntreprise(entreprise: Entreprise) {
+    return this.http.post(this.config.entreprises_url, entreprise)
       .map(resp => resp.json());
   }
 
-  updateStagiaire(stagiaires:Stagiaires) {
-    console.log(stagiaires);
-    return this.http.put(this.config.stagiaires_url+"/update/"+stagiaires.id,stagiaires)
-      .map(resp => resp.json());
-  }
-  DeleteStagiaire(id:number) {
-    return this.http.delete(this.config.stagiaires_url+"/"+id)
+  updateEntreprise(entreprise: Entreprise) {
+
+    return this.http.put(this.config.entreprises_url + "/update/" + entreprise.id, entreprise)
       .map(resp => resp.json());
   }
 
+  DeleteEntreprise(id: number) {
+    return this.http.delete(this.config.entreprises_url + "/" + id)
+      .map(resp => resp.json());
+  }
 
 
 
+/*
 
   ///////Filiere service
 
@@ -60,6 +63,6 @@ export class StagiaireService {
   Deletefiliere(id:number) {
     return this.http.delete(this.config.filiere_url+"/"+id)
       .map(resp => resp.json());
-  }
+  }*/
 
 }

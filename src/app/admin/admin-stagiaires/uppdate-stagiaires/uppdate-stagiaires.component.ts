@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {StagiaireService} from "../../../service/stagiaire.service";
 import {Http} from "@angular/http";
 import {ConfigService} from "../../../service/config.service";
+import {Filiere} from "../../../model/model.Filiere";
 
 
 @Component({
@@ -14,7 +15,7 @@ import {ConfigService} from "../../../service/config.service";
 export class UppdateStagiairesComponent implements OnInit {
   model: number = 1;
   stagiaires: Stagiaires = new Stagiaires();
-  filiere: any;
+  filiere: Filiere = new Filiere();
   idStagiaire: number = 0;
 
   constructor(public activatedRoute: ActivatedRoute,
@@ -47,15 +48,19 @@ export class UppdateStagiairesComponent implements OnInit {
   }
 
   updateStagiaire(stagiaires: Stagiaires) {
+
     this.stagiairesService.updateStagiaire(this.stagiaires)
       .subscribe(data => {
           console.log(data);
-          alert("mise a jour effectue");
-          this.route.navigate(['admin/stagiaires']);
+
+
         },
         err => {
           console.log(err);
-          alert("Probleme");
+
         })
+    location.reload();
+    this.route.navigate(['admin/stagiaires']);
+
   }
 }

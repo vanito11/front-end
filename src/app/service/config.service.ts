@@ -32,6 +32,8 @@ export class ConfigService {
 
   private _tuteurs_url = this._api_url + '/tuteurs';
 
+  private _entreprises_url = this._api_url + '/entreprises';
+
   private _reset_credentials_url = this._user_url + '/reset-credentials';
 
   private _foo_url = this._api_url + '/foo';
@@ -41,6 +43,10 @@ export class ConfigService {
   private _filiere_url = this._api_url + '/filieres';
 
   private _getStagiaire_url = this._api_url + '/stagiaires/';
+
+  get entreprises_url(): string {
+    return this._entreprises_url;
+  }
 
   get getStagiaire_url(): string {
     return this._getStagiaire_url;

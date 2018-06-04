@@ -37,12 +37,13 @@ export class AdminStagiairesComponent implements OnInit {
       )
   }
   onUpdateStagiaire(id:number){
+    location.reload();
     this.router.navigate(['editStagiaire',id])
   }
 
   onDeleteStagiaire(id:number){
     this.stagiairesServices.DeleteStagiaire(id)
       .subscribe(data=>{console.log(data); alert("stagiaire supprimer");},err=>{console.log(err); alert("Probleme");})
-
+    location.reload();
   }
 }

@@ -1,0 +1,82 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+
+
+              <div class="form-group">
+                <label class="control-label">Nom:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.nom" />
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Ville:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.ville"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Pays:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.pays"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Email:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.email"/>
+              </div>
+
+              <div class="form-group">
+              <label class="control-label">Site:</label>
+              <input class="form-control" type="text" [(ngModel)]="entreprise.site"/>
+            </div>
+
+              <div class="form-group">
+                <label class="control-label">Adresse:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.adresse"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Telephone:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.telephone"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Fax:</label>
+                <input class="form-control" type="text" [(ngModel)]="entreprise.fax"/>
+              </div>
+
+
+
+              <button (click)="updateEntreprise(entreprise)" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

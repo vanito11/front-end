@@ -23,20 +23,74 @@ import {AdminStagiairesComponent} from './admin/admin-stagiaires/admin-stagiaire
 import {AdminTuteursComponent} from './admin/admin-tuteurs/admin-tuteurs.component';
 import {AdminEncadrantsComponent} from './admin/admin-encadrants/admin-encadrants.component';
 import {AdminStagesComponent} from './admin/admin-stages/admin-stages.component';
-import {FiliereComponent} from './admin/filiere/filiere.component';
-import {NewStagiairesComponent} from './admin/stagiaire/new-stagiaires/new-stagiaires.component';
-import {UppdateStagiairesComponent} from './admin/stagiaire/uppdate-stagiaires/uppdate-stagiaires.component';
+import {AdminFiliereComponent} from './admin/admin-filiere/admin-filiere.component';
+import {NewStagiairesComponent} from './admin/admin-stagiaires/new-stagiaires/new-stagiaires.component';
+import {UppdateStagiairesComponent} from './admin/admin-stagiaires/uppdate-stagiaires/uppdate-stagiaires.component';
+import {NewEncadrantComponent} from './admin/admin-encadrants/new-encadrant/new-encadrant.component';
+import {UpdateEncadrantComponent} from './admin/admin-encadrants/update-encadrant/update-encadrant.component';
+import { NewFiliereComponent } from './admin/admin-filiere/new-filiere/new-filiere.component';
+import { UpdateFiliereComponent } from './admin/admin-filiere/update-filiere/update-filiere.component';
+import { NewTuteurComponent } from './admin/admin-tuteurs/new-tuteur/new-tuteur.component';
+import { UpdateTuteurComponent } from './admin/admin-tuteurs/update-tuteur/update-tuteur.component';
+import { AdminEntrepriseComponent } from './admin/admin-entreprise/admin-entreprise.component';
+import { NewEntrepriseComponent } from './admin/admin-entreprise/new-entreprise/new-entreprise.component';
+import { UpdateEntrepriseComponent } from './admin/admin-entreprise/update-entreprise/update-entreprise.component';
 
 export const routes: Routes = [
+  {
+    path: 'admin/entreprise/newentreprise',
+    component: NewEntrepriseComponent,
+    canActivate: [AdminGuard],
+  },
 
+  {
+    path: 'admin/entreprises',
+    component: AdminEntrepriseComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'admin/tuteur/newtuteur',
+    component: NewTuteurComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'admin/filiere/newfiliere',
+    component: NewFiliereComponent,
+    canActivate: [AdminGuard],
+  },
+{
+    path: 'admin/encadrant/newencadrant',
+    component: NewEncadrantComponent,
+    canActivate: [AdminGuard],
+  },
   {
     path: 'admin/stagiaire/newstagiaires',
     component: NewStagiairesComponent,
     canActivate: [AdminGuard],
   },
   {
+    path: 'editEntreprise/:id',
+    component: UpdateEntrepriseComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'editTuteur/:id',
+    component: UpdateTuteurComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'editFiliere/:id',
+    component: UpdateFiliereComponent,
+    canActivate: [AdminGuard],
+  },
+  {
     path: 'editStagiaire/:id',
     component: UppdateStagiairesComponent,
+    canActivate: [AdminGuard],
+  },
+  {
+    path: 'editEncadrant/:id',
+    component: UpdateEncadrantComponent,
     canActivate: [AdminGuard],
   },
 
@@ -87,8 +141,8 @@ export const routes: Routes = [
     canActivate: [AdminGuard]
   },
   {
-    path: 'admin/filiere',
-    component: FiliereComponent,
+    path: 'admin/filieres',
+    component: AdminFiliereComponent,
     canActivate: [AdminGuard]
   },
   {

@@ -1,11 +1,11 @@
 import {Filiere} from "./model.Filiere";
 
 export class Stagiaires{
-  id:number=0;
+  id:number;
   nom:string="";
   prenom:string="";
   adresse:string="";
-  dateNaissance:Date= new Date();
+  dateNaissance:Date;
   email:string="";
   password:string="";
   nationnalite:string="";
@@ -13,7 +13,6 @@ export class Stagiaires{
   telephone:string="";
   cv:string="";
   photo:string="";
-  filiere:Filiere = new Filiere();
-
+  filiere:Filiere;
 
 }

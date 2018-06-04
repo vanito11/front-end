@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FiliereComponent } from './filiere.component';
+import { UpdateEncadrantComponent } from './update-encadrant.component';
 
-describe('FiliereComponent', () => {
-  let component: FiliereComponent;
-  let fixture: ComponentFixture<FiliereComponent>;
+describe('UpdateEncadrantComponent', () => {
+  let component: UpdateEncadrantComponent;
+  let fixture: ComponentFixture<UpdateEncadrantComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FiliereComponent ]
+      declarations: [ UpdateEncadrantComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FiliereComponent);
+    fixture = TestBed.createComponent(UpdateEncadrantComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

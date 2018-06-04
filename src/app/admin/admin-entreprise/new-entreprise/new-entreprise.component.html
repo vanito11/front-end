@@ -1,0 +1,81 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+              <form #f="ngForm" (ngSubmit)="saveEntreprise(f.value)">
+
+                <div class="form-group">
+                  <label class="control-label">Nom:</label>
+                  <input class="form-control" type="text" ngModel name="nom" required/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Prenom:</label>
+                  <input class="form-control" type="text" ngModel name="ville"required/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Pays:</label>
+                  <input class="form-control" type="text" ngModel name="pays" required/>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="control-label">Email:</label>
+                  <input class="form-control" type="text" ngModel name="email" required/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Site:</label>
+                  <input class="form-control" type="text" ngModel name="site"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Adresse:</label>
+                  <input class="form-control" type="text" ngModel name="adresse"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Telephone:</label>
+                  <input class="form-control" type="text" ngModel name="telephone"/>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Fax:</label>
+                  <input class="form-control" type="text" ngModel name="fax"/>
+                </div>
+
+
+
+                <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
