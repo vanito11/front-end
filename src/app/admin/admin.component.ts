@@ -10,8 +10,7 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   public show:boolean = false;
-  public buttonName:any = 'CREER UN Nouveau UTILISATEUR';
-
+  public buttonName:any = 'CREER UN NEAUVOU UTILISATEUR';
 
   ngOnInit () {  }
 

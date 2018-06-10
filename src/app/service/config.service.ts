@@ -28,7 +28,7 @@ export class ConfigService {
 
   private _stagiaires_url = this._api_url + '/stagiaires';
 
-  private _stagestagiaires_url = this._api_url + '/stagestagaires';
+  private _stages_url = this._api_url + '/stagestagiaires';
 
   private _tuteurs_url = this._api_url + '/tuteurs';
 
@@ -42,35 +42,8 @@ export class ConfigService {
 
   private _filiere_url = this._api_url + '/filieres';
 
-  private _seanceencadrements_url = this._api_url + '/seanceencadrements';
-
-  private _documents_url = this._api_url + '/documents';
-
-  private _visites_url = this._api_url + '/visites';
-
-  private _soutenances_url = this._api_url + '/soutenances';
-
   private _getStagiaire_url = this._api_url + '/stagiaires/';
 
-
-  private _getStages_url = this._api_url + '/stages';
-
-  get documents_url(): string {
-    return this._documents_url;
-  }
-  get visites_url(): string {
-    return this._visites_url;
-  }
-  get soutenances_url(): string {
-    return this._soutenances_url;
-  }
-  get seanceencadrements_url(): string {
-    return this._seanceencadrements_url;
-  }
-
-  get getStages_url(): string {
-    return this._getStages_url;
-  }
   get entreprises_url(): string {
     return this._entreprises_url;
   }
@@ -110,8 +83,8 @@ export class ConfigService {
   get stagiaires_url(): string {
     return this._stagiaires_url;
   }
-  get stagestagiaires_url(): string {
-    return this._stagestagiaires_url;
+  get stages_url(): string {
+    return this._stages_url;
   }
   get tuteurs_url(): string {
     return this._tuteurs_url;

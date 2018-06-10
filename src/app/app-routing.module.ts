@@ -35,81 +35,8 @@ import { UpdateTuteurComponent } from './admin/admin-tuteurs/update-tuteur/updat
 import { AdminEntrepriseComponent } from './admin/admin-entreprise/admin-entreprise.component';
 import { NewEntrepriseComponent } from './admin/admin-entreprise/new-entreprise/new-entreprise.component';
 import { UpdateEntrepriseComponent } from './admin/admin-entreprise/update-entreprise/update-entreprise.component';
-import { SeanceEncadrementComponent } from './admin/admin-stages/seance-encadrement/seance-encadrement.component';
-import { SoutenancesComponent } from './admin/admin-stages/soutenances/soutenances.component';
-import { DocumentComponent } from './admin/admin-stages/document/document.component';
-import { VisitesComponent } from './admin/admin-stages/visites/visites.component';
-import { UpdateVisitesComponent } from './admin/admin-stages/Visites/update-visites/update-visites.component';
-import { UpdateDocumentComponent } from './admin/admin-stages/document/update-document/update-document.component';
-import { UpdateSoutenancesComponent } from './admin/admin-stages/soutenances/update-soutenances/update-soutenances.component';
-import { UpdateSeanceComponent } from './admin/admin-stages/seance-encadrement/update-seance/update-seance.component';
-import { NewDocumentComponent } from './admin/admin-stages/document/new-document/new-document.component';
-import { NewSoutenancesComponent } from './admin/admin-stages/soutenances/new-soutenances/new-soutenances.component';
-import { NewVisitesComponent } from './admin/admin-stages/Visites/new-visites/new-visites.component';
-import { NewSeanceComponent } from './admin/admin-stages/seance-encadrement/new-seance/new-seance.component';
 
 export const routes: Routes = [
-  {
-    path: 'admin/stages/newDocument/:id',
-    component: NewDocumentComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'admin/stages/newSoutenances/:id',
-    component: NewSoutenancesComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'admin/stages/newVisite/:id',
-    component: NewVisitesComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'admin/stages/newSeance/:id',
-    component: NewSeanceComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'admin/stages/newtuteur',
-    component: NewTuteurComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'editDocument/:id',
-    component: UpdateDocumentComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'editSoutenance/:id',
-    component: UpdateSoutenancesComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'editSeance/:id',
-    component: UpdateSeanceComponent,
-    canActivate: [AdminGuard],
-  },
-   {
-    path: 'admin/stages/Visite/:id',
-    component: VisitesComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'admin/stages/Document/:id',
-    component: DocumentComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'admin/stages/Soutenance/:id',
-    component: SoutenancesComponent,
-    canActivate: [AdminGuard],
-  },
-
-  {
-    path: 'admin/stages/seanceEncadrement/:id',
-    component: SeanceEncadrementComponent,
-    canActivate: [AdminGuard],
-  },
   {
     path: 'admin/entreprise/newentreprise',
     component: NewEntrepriseComponent,
@@ -139,11 +66,6 @@ export const routes: Routes = [
   {
     path: 'admin/stagiaire/newstagiaires',
     component: NewStagiairesComponent,
-    canActivate: [AdminGuard],
-  },
-  {
-    path: 'editVisite/:id',
-    component: UpdateVisitesComponent,
     canActivate: [AdminGuard],
   },
   {
