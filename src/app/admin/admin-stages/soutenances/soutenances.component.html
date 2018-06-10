@@ -1,0 +1,77 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+      <nav class="nav flex-column">
+
+        <button (click)="onNewSoutenance()" class="btn btn-primary">Ajouter Soutenance</button>
+
+      </nav>
+    </div>
+    <div class="col-lg-10">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="text-transform: capitalize;">chercher : </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">RECHERCHER</button>
+          </form>
+        </div>
+      </nav>
+
+      <table class="table">
+        <thead class="thead-light">
+        <tr>
+          <th scope="col">Date Soutenance</th>
+          <th scope="col">Encadrant</th>
+          <th scope="col">Tuteur</th>
+          <th scope="col">President</th>
+          <th scope="col">Examinateur 1</th>
+          <th scope="col">Examinateur 2</th>
+          <th scope="col">Rapporteur</th>
+          <th scope="col">Rapport</th>
+          <th scope="col">Description</th>
+          <th scope="col">Note</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let e of soutenance">
+          <th scope="col">{{e.dateSoutenance| date : format : timezone}}</th>
+          <th scope="col">{{e.stage.encadrant.nom + ' '+e.stage.encadrant.prenom}}</th>
+          <th scope="col">{{e.stage.tuteur.nom + ' '+e.stage.tuteur.prenom}}</th>
+          <th scope="col">{{e.president}}</th>
+          <th scope="col">{{e.exminateur1}}</th>
+          <th scope="col">{{e.examinateur2}}</th>
+          <th scope="col">{{e.rapporteur}}</th>
+          <th scope="col">{{e.rapport}}</th>
+          <th scope="col">{{e.description}}</th>
+          <th scope="col">{{e.note}}</th>
+
+
+          <th scope="col">
+            <button (click)="onUpdateSoutenance(e.id)" class="btn btn-primary">UPDATE</button>
+            <button (click)="onDeleteSoutenance(e.id)"class="btn btn-primary">DELETE</button><br>
+          </th>
+        </tr>
+
+        </tbody>
+      </table>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+
+
+</div><!-- /.container -->
+
+
+
+
+
+
+

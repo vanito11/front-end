@@ -1,0 +1,80 @@
+<app-header style="position:fixed; width: 100%;"></app-header>
+
+
+<div id="contents" class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-md-2">
+
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="container spacer">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <div class="panel panel-primary">
+
+              <div class="form-group">
+                <label class="control-label">Date Soutenance</label>
+                <input class="form-control" type="date" [(ngModel)]="soutenance.dateSoutenance" />
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">President :</label>
+                <input class="form-control" type="text" [(ngModel)]="soutenance.president"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Exminateur1:</label>
+                <input class="form-control" type="text" [(ngModel)]="soutenance.exminateur1"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Exminateur 2:</label>
+                <input class="form-control" type="text" [(ngModel)]="soutenance.examinateur2"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Rapporteur :</label>
+                <input class="form-control" type="text" [(ngModel)]="soutenance.rapporteur"/>
+              </div>
+
+
+              <div class="form-group">
+                <label class="control-label">Rapport :</label>
+                <input class="form-control" type="text" [(ngModel)]="soutenance.rapport"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Description :</label>
+                <input class="form-control" type="test" [(ngModel)]="soutenance.description"/>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Note :</label>
+                <input class="form-control" type="number" [(ngModel)]="soutenance.note"/>
+              </div>
+
+              <button (click)="updateSoutenance(soutenance)" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

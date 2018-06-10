@@ -14,10 +14,10 @@ import {StagiaireService} from "../../../service/stagiaire.service";
 export class NewFiliereComponent implements OnInit {
   filieres:Filiere = new Filiere();
   constructor(private apiService: ApiService,
-              private config: ConfigService,
-              private http: Http,
-              private router: Router,
-              public filiereService: StagiaireService) {
+                 private config: ConfigService,
+                 private http: Http,
+                 private router: Router,
+                 public filiereService: StagiaireService) {
     this.http = http;
 
   }
@@ -25,9 +25,6 @@ export class NewFiliereComponent implements OnInit {
   ngOnInit() {
   }
   saveFiliere(DataForm) {
-
-
-
     this.filiereService.saveFiliere(DataForm).subscribe(data => {
       console.log(data)
 
