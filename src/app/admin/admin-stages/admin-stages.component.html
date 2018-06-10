@@ -34,32 +34,22 @@
           <th scope="col">Sujet de Stage</th>
           <th scope="col">Entreprise</th>
           <th scope="col">Type de Stage</th>
-          <th scope="col">Info</th>
-          <th scope="col">Option</th>
 
 
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let e of stagestagiaires">
-          <th scope="col">{{e.stagiaireBean.nom +' '+e.stagiaireBean.prenom}}</th>
-          <th scope="col">{{e.stageBean.encadrant.nom +' '+e.stageBean.encadrant.prenom}}</th>
-          <th scope="col">{{e.stageBean.tuteur.nom +' '+e.stageBean.tuteur.prenom}}</th>
-          <th scope="col">{{e.stageBean.sujet}}</th>
-          <th scope="col">{{e.stageBean.tuteur.entreprise.nom}}</th>
-          <th scope="col">{{e.stageBean.type.type}}</th>
+        <tr *ngFor="let e of stage">
+          <th scope="col">{{e.stagiaire.nom +' '+e.stagiaire.prenom}}</th>
+          <th scope="col">{{e.stage.encadrant.nom +' '+e.stage.encadrant.prenom}}</th>
+          <th scope="col">{{e.stage.tuteur.nom +' '+e.stage.tuteur.prenom}}</th>
+          <th scope="col">{{e.stage.sujet}}</th>
+          <th scope="col">{{e.stage.tuteur.entreprise.nom}}</th>
+          <th scope="col">{{e.stage.type.type}}</th>
 
 
           <th scope="col">
-            <button (click)="PageSeanceEncadrement(e.stageBean.id)" class="btn btn-primary">Seance Encadrement</button>
-            <button (click)="PageVisite(e.stageBean.id)"class="btn btn-primary">Visite</button><br>
-            <button (click)="PageDocument(e.stageBean.id)"class="btn btn-primary">Document</button><br>
-            <button (click)="PageSoutenance(e.stageBean.id)"class="btn btn-primary">Soutenance</button><br>
-          </th>
-
-          <th scope="col">
-            <button (click)="onUpdateStage(e.stageBean.id)" class="btn btn-primary">UPDATE</button>
-            <button (click)="onDeleteStage(e.stageBean.id)"class="btn btn-primary">DELETE</button><br>
+            <a class="nav-link active" href="">Update</a><a class="nav-link active" href="">Delete</a><a class="nav-link active" href="">Afficher</a>
           </th>
         </tr>
 

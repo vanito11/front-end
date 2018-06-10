@@ -72,21 +72,6 @@ import { AdminEntrepriseComponent } from './admin/admin-entreprise/admin-entrepr
 import { NewEntrepriseComponent } from './admin/admin-entreprise/new-entreprise/new-entreprise.component';
 import { UpdateEntrepriseComponent } from './admin/admin-entreprise/update-entreprise/update-entreprise.component';
 import {EntrepriseService} from "./service/entreprise.service";
-import { SeanceEncadrementComponent } from './admin/admin-stages/seance-encadrement/seance-encadrement.component';
-import { SoutenancesComponent } from './admin/admin-stages/soutenances/soutenances.component';
-import { DocumentComponent } from './admin/admin-stages/document/document.component';
-import { MessagesComponent } from './admin/admin-stages/messages/messages.component';
-import { VisitesComponent } from './admin/admin-stages/visites/visites.component';
-import { NewVisitesComponent } from './admin/admin-stages/Visites/new-visites/new-visites.component';
-import { UpdateVisitesComponent } from './admin/admin-stages/Visites/update-visites/update-visites.component';
-import { UpdateDocumentComponent } from './admin/admin-stages/document/update-document/update-document.component';
-import { NewDocumentComponent } from './admin/admin-stages/document/new-document/new-document.component';
-import { NewSoutenancesComponent } from './admin/admin-stages/soutenances/new-soutenances/new-soutenances.component';
-import { UpdateSoutenancesComponent } from './admin/admin-stages/soutenances/update-soutenances/update-soutenances.component';
-import { UpdateSeanceComponent } from './admin/admin-stages/seance-encadrement/update-seance/update-seance.component';
-import { NewSeanceComponent } from './admin/admin-stages/seance-encadrement/new-seance/new-seance.component';
-import { NewStageComponent } from './admin/admin-stages/stages/new-stage/new-stage.component';
-import { UpdateStageComponent } from './admin/admin-stages/stages/update-stage/update-stage.component';
 
 export function initUserFactory(userService: UserService) {
     return () => userService.initUser();
@@ -128,21 +113,6 @@ export function initUserFactory(userService: UserService) {
     AdminEntrepriseComponent,
     NewEntrepriseComponent,
     UpdateEntrepriseComponent,
-    SeanceEncadrementComponent,
-    SoutenancesComponent,
-    DocumentComponent,
-    MessagesComponent,
-    VisitesComponent,
-    NewVisitesComponent,
-    UpdateVisitesComponent,
-    UpdateDocumentComponent,
-    NewDocumentComponent,
-    NewSoutenancesComponent,
-    UpdateSoutenancesComponent,
-    UpdateSeanceComponent,
-    NewSeanceComponent,
-    NewStageComponent,
-    UpdateStageComponent,
 
 
 
